@@ -25,6 +25,10 @@ app.use("/api/campaigns", campaignRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/donations", donationRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Server is running successfully!");
+});
+
 // Global Error Handling
 app.use((err, req, res, next) => {
   console.error(err.stack);
